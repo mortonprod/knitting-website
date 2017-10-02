@@ -1,0 +1,23 @@
+{
+  "name": "knitting-website",
+  "version": "1.0.0",
+  "description": "A website for a knitting company",
+  "main": "wwwroot",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "docker build -t aspnetapp .",
+    "run": "docker run -d -p 8080:80 --name myapp aspnetapp",
+    "logs": "docker logs myapp",
+    "docker:rm": "docker stop $(docker ps -a -q) && docker rm $(docker ps -a -q)"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mortonprod/knitting-website.git"
+  },
+  "author": "“Alexander Morton\" <“mortonprod@gmail.com”> (https://alexandermorton.co.uk)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mortonprod/knitting-website/issues"
+  },
+  "homepage": "https://github.com/mortonprod/knitting-website#readme"
+}
