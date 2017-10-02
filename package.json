@@ -5,8 +5,9 @@
   "main": "wwwroot",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "restore": "dotnet restore && npm install",
     "build": "docker build -t aspnetapp .",
-    "run": "docker run -d -p 8080:80 --name myapp aspnetapp",
+    "run": "npm run docker:rm && docker run -d -p 8080:80 --name myapp aspnetapp",
     "logs": "docker logs myapp",
     "docker:rm": "docker stop $(docker ps -a -q) && docker rm $(docker ps -a -q)"
   },
